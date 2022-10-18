@@ -1,0 +1,16 @@
+{
+  "name": "sb-management-api-helpers",
+  "version": "1.0.0",
+  "description": "Simple action scripts and classes using the Management API",
+  "type": "module",
+  "scripts": {
+    "duplicable": "node ./scripts/duplicable-space.js"
+  },
+  "author": "Dawntraoz",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.3",
+    "storyblok-js-client": "^4.5.8"
+  }
+}
