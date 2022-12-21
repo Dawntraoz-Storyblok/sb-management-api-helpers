@@ -1,11 +1,11 @@
 import StoryblokClient from 'storyblok-js-client'
-import axios from 'axios'
 
 export default class makeStoryblokDuplicable {
   constructor(settings) {
     this.space_id = settings.space_id
     this.client = new StoryblokClient({
-      oauthToken: settings.token
+      oauthToken: settings.token,
+      // region: 'us'
     })
   }
 

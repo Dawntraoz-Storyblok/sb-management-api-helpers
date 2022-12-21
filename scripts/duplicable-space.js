@@ -1,7 +1,7 @@
 /*
 * Make a space duplicable using: https://app.storyblok.com/#!/build/[SB_SPACE_ID]
 */
-import makeStoryblokDuplicable from '../helpers/duplicableSpace.js'
+import { makeStoryblokDuplicable } from '../helpers/index.js'
 import dotenv from 'dotenv'
 dotenv.config()
 
