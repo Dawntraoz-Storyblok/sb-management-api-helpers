@@ -22,3 +22,32 @@ SB_SPACE_ID=<space-ID>
   ```bash
   npm run duplicable
   ```
+
+2. Get all the folders from your space:
+
+  ```bash
+  npm run folders
+  ```
+
+3. Make your component fields translatable:
+
+  Go to ./scripts/component-translatable.js and add the component details needed to make the fields translatable:
+
+  ```js
+  // Component Details
+  component: {
+    id: '', // Provided in the URL when opening the blok in the Block library
+    name: '', // Technical name in the Config Tab
+    fields: [
+      // Fields name & type in lowercase
+      { name: 'headline', type: 'text' },
+      { name: 'teaser', type: 'textarea' },
+    ]
+  }
+  ```
+
+  Then you will be able to run:
+
+  ```bash
+  npm run component-translatable
+  ```

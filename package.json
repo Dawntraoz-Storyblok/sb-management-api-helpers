@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "duplicable": "node ./scripts/duplicable-space.js",
-    "folders": "node ./scripts/folders-space.js"
+    "folders": "node ./scripts/folders-space.js",
+    "component-translatable": "node ./scripts/component-translatable.js"
   },
   "author": "Dawntraoz",
   "license": "Apache-2.0",
