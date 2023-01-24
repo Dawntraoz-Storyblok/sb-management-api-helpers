@@ -6,7 +6,8 @@
   "scripts": {
     "duplicable": "node ./scripts/duplicable-space.js",
     "folders": "node ./scripts/folders-space.js",
-    "component-translatable": "node ./scripts/component-translatable.js"
+    "component-translatable": "node ./scripts/component-translatable.js",
+    "story-versions": "node ./scripts/story-versions.js"
   },
   "author": "Dawntraoz",
   "license": "Apache-2.0",

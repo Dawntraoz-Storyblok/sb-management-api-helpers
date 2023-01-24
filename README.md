@@ -51,3 +51,17 @@ SB_SPACE_ID=<space-ID>
   ```bash
   npm run component-translatable
   ```
+
+4. Page History: Get the latest 25th story versions and the difference from each one
+
+  Go to ./scripts/story-versions.js and add the story id:
+
+  ```js
+  story_id: '' // Provided in the URL when opening the story in the Visual Editor
+  ```
+
+  Then you will be able to run:
+
+  ```bash
+  npm run story-versions
+  ```
