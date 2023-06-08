@@ -14,14 +14,7 @@ export default class shareContent {
    * Fetch space A entries
    */
   async fetchSpaceContent() {
-    const Storyblok = new StoryblokClient({
-      accessToken: this.space_a_id,
-      // region: 'us'
-    })
-    const res = await this.client.get(`spaces/${this.space_a_id}/stories`, {
-      "story_only": true,
-      "per_page": 100
-    })
+    const res = await this.client.get(`spaces/${this.space_a_id}/stories`, { "story_only": true, "per_page": 100 })
     return res.data.stories
   }
 
