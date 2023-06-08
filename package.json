@@ -7,6 +7,7 @@
     "duplicable": "node ./scripts/duplicable-space.js",
     "folders": "node ./scripts/folders-space.js",
     "component-translatable": "node ./scripts/component-translatable.js",
+    "share-content": "node ./scripts/share-content-between-spaces.js",
     "story-versions": "node ./scripts/story-versions.js"
   },
   "author": "Dawntraoz",
