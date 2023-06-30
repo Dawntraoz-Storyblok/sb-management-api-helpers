@@ -75,3 +75,9 @@ SB_SPACE_B_ID=<SPACE-B-ID>
     ```bash
     npm run share-content
     ```
+
+6. Migrate first 25 assets from an old space to a new one:
+
+    ```bash
+    npm run migrate-assets
+    ```
