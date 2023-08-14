@@ -81,3 +81,9 @@ SB_SPACE_B_ID=<SPACE-B-ID>
     ```bash
     npm run migrate-assets
     ```
+
+7. Update a task dialog based on a specific Content Type entries:
+
+    ```bash
+    npm run update-task
+    ```

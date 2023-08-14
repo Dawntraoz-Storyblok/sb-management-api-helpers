@@ -4,6 +4,7 @@ import makeComponentTranslatable from './componentTranslatable.js';
 import migrateAssetsBetweenSpaces from './migrateAssetsBetweenSpaces.js';
 import shareContent from './shareContentBetweenSpaces.js';
 import getStoryVersions from './storyVersions.js';
+import updateTask from './updateTask.js';
 
 export {
   makeStoryblokDuplicable,
@@ -11,5 +12,6 @@ export {
   makeComponentTranslatable,
   migrateAssetsBetweenSpaces,
   shareContent,
-  getStoryVersions
+  getStoryVersions,
+  updateTask
 };
