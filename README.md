@@ -87,3 +87,9 @@ SB_SPACE_B_ID=<SPACE-B-ID>
     ```bash
     npm run update-task
     ```
+
+8. Get number of Nestable components in a space:
+
+    ```bash
+    npm run components-by-type
+    ```

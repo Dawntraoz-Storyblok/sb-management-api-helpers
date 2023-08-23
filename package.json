@@ -6,6 +6,7 @@
   "scripts": {
     "duplicable": "node ./scripts/duplicable-space.js",
     "folders": "node ./scripts/folders-space.js",
+    "components-by-type": "node ./scripts/components-by-type.js",
     "component-translatable": "node ./scripts/component-translatable.js",
     "migrate-assets": "node ./scripts/migrate-assets.js",
     "share-content": "node ./scripts/share-content-between-spaces.js",
