@@ -11,7 +11,8 @@
     "migrate-assets": "node ./scripts/migrate-assets.js",
     "share-content": "node ./scripts/share-content-between-spaces.js",
     "story-versions": "node ./scripts/story-versions.js",
-    "update-task": "node ./scripts/update-task.js"
+    "update-task": "node ./scripts/update-task.js",
+    "app-space-settings": "node ./scripts/app-space-settings.js"
   },
   "author": "Dawntraoz",
   "license": "Apache-2.0",
