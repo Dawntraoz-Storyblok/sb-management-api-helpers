@@ -12,15 +12,16 @@
     "share-content": "node ./scripts/share-content-between-spaces.js",
     "story-versions": "node ./scripts/story-versions.js",
     "update-task": "node ./scripts/update-task.js",
-    "app-space-settings": "node ./scripts/app-space-settings.js"
+    "app-space-settings": "node ./scripts/app-space-settings.js",
+    "ai-seo-bulk-update": "node ./scripts/ai-seo-bulk-update.js"
   },
   "author": "Dawntraoz",
   "license": "Apache-2.0",
   "dependencies": {
-    "dotenv": "^16.0.3",
-    "storyblok-js-client": "^5.2.1"
+    "dotenv": "^16.5.0",
+    "storyblok-js-client": "^7.0.2"
   },
   "devDependencies": {
-    "form-data": "^4.0.0"
+    "form-data": "^4.0.3"
   }
 }
