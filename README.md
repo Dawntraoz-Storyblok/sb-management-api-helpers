@@ -16,6 +16,13 @@ Then, copy `.env.example` and rename it to `.env`, provide your own Storyblok eq
 SB_MANAGEMENT_API_TOKEN=<your-personal-access-token>
 SB_SPACE_ID=<space-ID>
 
+# Bulk AI SEO Update script variables
+SB_CONTENT_TYPE=<your-content-type-component-name>
+SB_SEO_FIELD_NAME=<your-seo-field-name>
+AI_API_URL=<your-ai-api-endpoint>
+AI_API_TOKEN=<your-ai-api-token>
+AI_CUSTOM_PROMPT="<your-custom-ai-prompt>"
+
 # Migration between spaces scripts variables
 SB_SPACE_A_ID=<SPACE-A-ID>
 SB_SPACE_B_ID=<SPACE-B-ID>
@@ -107,3 +114,17 @@ SB_APP_ID=
    ```bash
    npm run app-space-settings
    ```
+
+10. Bulk AI SEO update: Generate and update SEO metadata for stories using AI:
+
+    Set up your environment variables for AI API integration, then run:
+
+    ```bash
+    # Test mode (recommended first)
+    npm run ai-seo-bulk-update -- --dry-run
+
+    # Actual updates
+    npm run ai-seo-bulk-update
+    ```
+
+    For detailed configuration and usage instructions, see the [AI SEO Bulk update documentation](./docs/AI_SEO_BULK_UPDATE.md).
