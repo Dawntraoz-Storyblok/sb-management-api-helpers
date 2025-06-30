@@ -7,6 +7,7 @@ import shareContent from "./shareContentBetweenSpaces.js";
 import getStoryVersions from "./storyVersions.js";
 import updateTask from "./updateTask.js";
 import appSpaceSettings from "./appSpaceSettings.js";
+import bulkAiSeoUpdate from "./bulkAiSeoUpdate.js";
 
 export {
   makeStoryblokDuplicable,
@@ -18,4 +19,5 @@ export {
   getStoryVersions,
   updateTask,
   appSpaceSettings,
+  bulkAiSeoUpdate,
 };
