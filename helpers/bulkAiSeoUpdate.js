@@ -284,8 +284,6 @@ Please generate SEO content in the following JSON format:
 
         if (result.success) {
           results.successful++;
-        } else if (result.reason === "No SEO field found") {
-          results.skipped++;
         } else {
           results.failed++;
           results.errors.push({

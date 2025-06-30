@@ -1,22 +1,24 @@
-# Bulk AI SEO Update Script
+# Bulk AI SEO update script
 
-This script enables bulk updates of Storyblok stories with AI-generated SEO content using **only the Management API (MAPI)**. It targets stories with a specific content type that contains an AI SEO field and uses your custom AI API to generate optimized SEO metadata.
+This script enables bulk updates of Storyblok stories containing an AI SEO field plugin using **only the Management API (MAPI)**.
+
+It targets stories with a specific content type that contains an AI SEO field and uses your custom AI API to generate optimized SEO metadata.
 
 ## Features
 
-- **Management API Only**: Uses only the Storyblok Management API for all operations
+- **Management API**: Uses only the Storyblok Management API for all operations
 - Fetches all stories with a specified content type using pagination
-- Generates AI-powered SEO content for multiple fields
-- **Content Field Cleaning**: Automatically removes system fields (starting with `_`) before updates
+- Generates AI SEO meta tags for multiple stories
+- **Content field cleaning**: Automatically removes system fields (starting with `_`) before updates
 - Preserves existing non-AI SEO field values
 - Supports dry-run mode for testing
 - Comprehensive error handling and reporting
 - Rate limiting to avoid API throttling
 - Detailed progress and completion reports
 
-## AI-Generated SEO Fields
+## AI SEO meta tags
 
-The script generates content for these SEO fields using AI:
+The script generates content for these SEO meta tags using AI:
 
 - `title` - SEO optimized title (max 60 characters)
 - `description` - Meta description (max 160 characters)
@@ -26,7 +28,7 @@ The script generates content for these SEO fields using AI:
 - `twitter:title` - Twitter title (max 70 characters)
 - `twitter:description` - Twitter description (max 200 characters)
 
-## Preserved Fields
+## Preserved fields
 
 These fields are preserved from existing content or set to defaults:
 
@@ -62,7 +64,7 @@ This approach ensures:
 
 ## Setup
 
-### 1. Environment Configuration
+### 1. Environment configuration
 
 Copy `.env.example` to `.env` and configure:
 
@@ -79,7 +81,7 @@ AI_API_TOKEN=your_ai_api_token
 AI_CUSTOM_PROMPT="Your custom AI prompt for SEO generation"
 ```
 
-### 2. Content Type Setup
+### 2. Content Type setup
 
 Ensure your Storyblok content type has an AI SEO field plugin included with the following structure:
 
@@ -107,7 +109,7 @@ Ensure your Storyblok content type has an AI SEO field plugin included with the 
 }
 ```
 
-### 3. AI API Integration
+### 3. AI API integration
 
 The script is designed to work with various AI APIs. You'll need to:
 
@@ -116,7 +118,7 @@ The script is designed to work with various AI APIs. You'll need to:
 3. **Customize the prompt** in `AI_CUSTOM_PROMPT`
 4. **Adapt the API call** in the `generateAiSeoContent` method if needed
 
-#### Example AI API Configurations
+#### Example AI API configurations
 
 **OpenAI GPT:**
 
@@ -134,25 +136,25 @@ AI_API_TOKEN=your-anthropic-api-key
 
 ## Usage
 
-### Basic Usage
+### Basic usage
 
 ```bash
 npm run ai-seo-bulk-update
 ```
 
-### Dry Run (Test Mode)
+### Dry run (Test mode)
 
 ```bash
 npm run ai-seo-bulk-update -- --dry-run
 ```
 
-### With Command Line Overrides
+### With command line overrides
 
 ```bash
 npm run ai-seo-bulk-update -- --space-id=12345 --content-type=blog_post --seo-field=seo_metadata
 ```
 
-### Available Command Line Arguments
+### Available command line arguments
 
 - `--dry-run` - Run without making actual changes
 - `--space-id=VALUE` - Override space ID from environment
@@ -161,7 +163,7 @@ npm run ai-seo-bulk-update -- --space-id=12345 --content-type=blog_post --seo-fi
 
 ## Customization
 
-### Custom AI API Integration
+### Custom AI API integration
 
 If you're using a different AI API, you may need to modify the `generateAiSeoContent` method in `/helpers/bulkAiSeoUpdate.js`:
 
@@ -169,7 +171,7 @@ If you're using a different AI API, you may need to modify the `generateAiSeoCon
 2. **Response parsing** - Modify how the AI response is parsed
 3. **Error handling** - Adapt error handling for your API's response format
 
-### Management API Customization
+### Management API customization
 
 The script uses a single Management API client (`this.client`) for all operations. You can customize:
 
@@ -178,11 +180,11 @@ The script uses a single Management API client (`this.client`) for all operation
 3. **Pagination size** - Adjust `per_page` parameter for different batch sizes
 4. **Content cleaning** - Modify the `cleanContent` method for different field filtering rules
 
-### Custom Prompts
+### Custom prompts
 
 Customize the AI prompt by setting `AI_CUSTOM_PROMPT` in your environment variables. The prompt should instruct the AI to generate SEO content in the expected JSON format.
 
-## Safety Features
+## Safety features
 
 - **Dry run mode** for testing without changes
 - **Content field cleaning** automatically removes system fields (starting with `_`) before updates
@@ -203,7 +205,7 @@ The script provides detailed progress information:
 
 ## Troubleshooting
 
-### Common Issues
+### Common issues
 
 1. **Missing environment variables** - Check all required variables are set
 2. **Authentication errors** - Verify your Management API token has proper permissions
@@ -212,7 +214,7 @@ The script provides detailed progress information:
 5. **Content update failures** - Check that system fields are being cleaned properly
 6. **Rate limiting** - The script includes delays, but you may need to adjust them
 
-### Error Logs
+### Error logs
 
 All errors are logged with details about:
 
@@ -221,11 +223,11 @@ All errors are logged with details about:
 - API response details when available
 - Suggestions for resolution
 
-### Management API Specific Issues
+### Management API specific issues
 
-- **Token Permissions**: Ensure your Management API token has write access to stories
-- **Content Type Filtering**: Verify the content type name matches exactly
-- **Field Structure**: Check that the SEO field exists in your content type schema
+- **Token permissions**: Ensure your Management API token has write access to stories
+- **Content Type filtering**: Verify the content type name matches exactly
+- **Field structure**: Check that the SEO field exists in your content type schema
 
 ## Performance
 

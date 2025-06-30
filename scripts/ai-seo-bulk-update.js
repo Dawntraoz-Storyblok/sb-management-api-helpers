@@ -4,7 +4,7 @@
  * Usage:
  * npm run ai-seo-bulk-update
  *
- * Environment Variables Required:
+ * Environment variables required:
  * - SB_MANAGEMENT_API_TOKEN: Your Storyblok Management API token
  * - SB_SPACE_ID: The space ID where stories will be updated
  * - SB_CONTENT_TYPE: The content type component name (e.g., 'blog_post', 'page')
@@ -96,8 +96,7 @@ console.log(
 console.log(
   `AI API Token: ${config.ai_api_token ? "✅ Configured" : "❌ Not configured"}`
 );
-console.log(`Dry Run: ${dryRun}`);
-console.log("");
+console.log(`Dry Run: ${dryRun}\n`);
 
 // Confirmation prompt for non-dry runs
 if (!dryRun) {
@@ -105,12 +104,10 @@ if (!dryRun) {
     "⚠️  WARNING: This will make actual changes to your Storyblok content!"
   );
   console.log(
-    "⚠️  Make sure you have a backup of your content before proceeding."
+    "⚠️  Make sure you have a backup of your content before proceeding.\n"
   );
-  console.log("");
 
-  // In a real scenario, you might want to add a confirmation prompt here
-  // For now, we'll proceed automatically but log the warning
+  // Nice to have: Confirmation prompt
 }
 
 try {
